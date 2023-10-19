@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="manualdogit/style.css">
+    <title> Comandos Git. </title>
+</head>
+<body>
+    <h2> Principais comandos Git. </h2>
+        <p> Se você estiver familiarizado com alguns dos principais comandos do Git, seus primeiros passos na ferramenta podem se tornar mais descomplicados. </p>
+        <p> Para isso, trouxemos abaixo uma lista dos comandos mais utilizados pelos programadores(as) e o que eles significam.</p>
+    <ul type="square">
+        <li> init </li>
+        <li> clone </li>
+        <li> commit </li>
+        <li> add </li>
+        <li> push </li>
+        <li> pull </li>
+        <li> merge </li>
+        <li> log </li>
+        <li> reset </li>
+        <li> remote </li>
+        <li> config </li>
+            <p> A primeira coisa que você deve fazer quando instalar o Git é definir o seu nome de usuário e endereço de e-mail. Isso é importante porque todos os      commits no Git utilizam essas informações, e está imutavelmente anexado nos commits que você realiza:
+            </p>
+                <table border="1px"> 
+                    <tr>
+                        <td> git config --global user.name "nome do desenvolvedor" </td>
+                    </tr>    
+                </table>
+                <table border="1px">
+                    <tr>
+                        <td> git config --global user.email "nomedodesenvolvedor@example.com" </td>
+                    </tr>
+                </table>
+            <p> Relembrando, você só precisará fazer isso uma vez caso passe a opção --global, pois o Git sempre usará essa informação para qualquer coisa que você faça nesse sistema. Caso você queira sobrepor estas com um nome ou endereço de e-mail diferentes para projetos específicos, você pode executar o comando sem a opção --global quando estiver no próprio projeto. 
+            </p>
+            <p> Para ativar as cores nas respostas de comandos, você pode utilizar o seguinte comando:
+                <table border="1px"> 
+                    <tr> 
+                        <td> git config --global color.ui true </td>
+                    </tr>
+                </table>
+        <li> status </li>
+        <li> help </li>
+            <p> Comando para obter Ajuda ao usar o Git </p>
+            <p> Existem três maneiras de obter a ajuda para qualquer um dos comandos Git </p>
+                <table border="1px">
+                    <tr> 
+                        <td> git help {comando} </td>
+                <table border="1px">
+                    <tr>
+                        <td> git {comando} --help </td>
+                    </tr>
+                </table>    
+                <table border="1px">
+                    <tr>
+                        <td> man git- {comando} </td>                
+                    </tr>
+                </table>
+    </ul>
+            <p> Fonte: https://comandosgit.github.io/ </p>
+
+</body>
+</html>
