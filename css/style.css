@@ -1,0 +1,29 @@
+h1 { 
+    color:coral;
+}
+
+h2 {
+    color: darkblue;
+}
+
+header {
+    background-image: url();
+    text-align: center;
+    padding: 50px;
+}
+
+footer {
+    background-color:darkblue;
+    text-align: center;
+    padding: 50px;
+}    
+
+main {
+    background-image: url();
+    text-align: left;
+    padding: 50;
+}
+
+img {
+    width: 50px;
+}

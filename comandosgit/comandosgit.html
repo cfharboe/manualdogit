@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style.css">
+    <title> Comandos Git. </title>
+</head>
+<body>
+    <header>
+        <h1> Comandos Git </h1>
+    </header>
+    <main>
+    <h2> Principais comandos Git. </h2>
+        <p> Se você estiver familiarizado com alguns dos principais comandos do Git, seus primeiros passos na ferramenta podem se tornar mais descomplicados. </p>
+        <p> Para isso, trouxemos abaixo uma lista dos comandos mais utilizados pelos programadores(as) e o que eles significam.</p>
+    <ul type="square">
+        <li> init </li>
+        <p> O comando git init é o mais indicado para começar um projeto que ainda não seja um repositório (ou repo).
+        Basicamente, ele cria um repositório vazio ou transforma uma pasta que você já tem e que não está com controle de versão em um repositório.
+        Com sua pasta de trabalho devidamente iniciada, é hora de começar a preenchê-la.
+        </p>
+        <li> clone </li>
+        <p> O Git clone é um comando para baixar o código-fonte existente de um repositório remoto (como o Github, por exemplo). </p>
+        Existem algumas maneiras de baixar o código-fonte,mas é preferivel o clone com o modo https:
+           <table border="1px"> 
+               <tr>
+                   <th> git clone "endereçodolink" </th>
+               </tr>
+            </table>
+        <p> Quando você clonar um repositório, o código é copiado para a o seu computador e continua linkado ao original. </p>
+        <li> commit </li>
+        <p> O git commit visa definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde, se necessário. </p> 
+            <table border="1px"> 
+                <tr>
+                    <th> git commit -m "mensagem explicando a mudança no código" </th>
+                </tr>
+             </table>
+        <li> add </li>
+        Quando criamos, modificamos ou excluímos um arquivo, essas alterações ocorrerão em nosso ambiente local e não serão incluídas no próximo commit (a menos que alteremos as configurações).
+        Para incluir as alterações de um arquivo em nosso próximo commit, será preciso usar o comando git add.
+        Para adicionar apenas um arquivo:
+        git add <arquivo>
+        Para adicionar, de uma vez, todos os arquivos modificados:
+        git add .
+        Vale lembrar que o comando git add não altera o repositório e as alterações não são salvas até usarmos o git commit.
+        <li> push </li>
+        Após confirmar as alterações, a próxima coisa que você deseja fazer é enviar as alterações para o servidor remoto usando o comando git push:
+        git push <remote> <nome-do-branch>
+        No entanto, se seu branch for criado recentemente, você também precisará fazer upload do branch com o seguinte comando:
+        git push -u origin <nome-do-branch>
+            <li> pull </li>
+            O git pull é usado para obter atualizações do repositório remoto. 
+            Trata-se de um comando que depende do referencial de onde ele foi feito, ou seja, um git pull feito da sua máquina vai puxar informações do repositório original para ela. Mas um git pull feito a partir do repositório original vai puxar as informações da sua máquina. Percebe?
+            Este comando é uma combinação de git fetch (baixa as alterações do repositório remoto, mas não as mescla com o seu) e git merge (que mescla tudo junto).
+            Isso significa que, quando usamos o git pull, ele recebe as atualizações do repositório remoto (git fetch) e aplica imediatamente as alterações mais recentes no seu local (git merge).
+            git pull <remote>
+        </ul>
+    </main>
+    <footer>
+        
+    </footer>
+    </body>
+</html>
+       
