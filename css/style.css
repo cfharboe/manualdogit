@@ -3,27 +3,29 @@ h1 {
 }
 
 h2 {
-    color: darkblue;
+    color:deepskyblue;
 }
 
 header {
-    background-image: url();
+    background-image: url(../img/git.jpg);
     text-align: center;
-    padding: 50px;
+    padding: 70px;
 }
 
 footer {
-    background-color:darkblue;
+    background-image: url(../img/gitinho.jpg);
     text-align: center;
-    padding: 50px;
+    padding: 100px;
 }    
 
 main {
-    background-image: url();
+    background-image: url(../img/corpo.jpg);
     text-align: left;
+    color:darksalmon ;
     padding: 50;
 }
 
 img {
     width: 50px;
 }
+
