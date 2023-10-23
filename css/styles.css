@@ -11,10 +11,10 @@ header {
     background-size: cover;
     text-align: left;
     background-position: center;
-    height: 325px;
-    font-family: Verdana;
     height: 280px;
-    padding-left: 5px;
+    font-family: Verdana;
+    height: 350px;
+    padding-left: 100px;
     padding-top: 50px;
 }
 
