@@ -1,64 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/style.css">
-    <title> Comandos Git. </title>
+    <title> Comandos do Git. </title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header>
-        <h1> Comandos Git </h1>
+        <h1> Comandos do </h1>
     </header>
     <main>
-    <h2> Principais comandos Git. </h2>
-        <p> Se você estiver familiarizado com alguns dos principais comandos do Git, seus primeiros passos na ferramenta podem se tornar mais descomplicados. </p>
-        <p> Para isso, trouxemos abaixo uma lista dos comandos mais utilizados pelos programadores(as) e o que eles significam.</p>
-    <ul type="square">
-        <li> init </li>
-        <p> O comando git init é o mais indicado para começar um projeto que ainda não seja um repositório (ou repo).
-        Basicamente, ele cria um repositório vazio ou transforma uma pasta que você já tem e que não está com controle de versão em um repositório.
-        Com sua pasta de trabalho devidamente iniciada, é hora de começar a preenchê-la.
-        </p>
-        <li> clone </li>
-        <p> O Git clone é um comando para baixar o código-fonte existente de um repositório remoto (como o Github, por exemplo). </p>
-        Existem algumas maneiras de baixar o código-fonte,mas é preferivel o clone com o modo https:
-           <table border="1px"> 
-               <tr>
-                   <th> git clone "endereçodolink" </th>
-               </tr>
-            </table>
-        <p> Quando você clonar um repositório, o código é copiado para a o seu computador e continua linkado ao original. </p>
-        <li> commit </li>
-        <p> O git commit visa definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde, se necessário. </p> 
-            <table border="1px"> 
-                <tr>
-                    <th> git commit -m "mensagem explicando a mudança no código" </th>
+        <h2> Comandos do Git </h2>
+        <ul type="circle">
+            <li> merge </li>
+            <p> Quando você conclui o desenvolvimento em sua branch e tudo funciona bem, sem conflitos, a etapa final é
+                mesclar as branches, isso é feito com o comando git merge. </p>
+            <p>Como falamos no tópico sobre git pull, esse comando vai mesclar, no seu repositório local, todas as
+                alterações feitas. </p>
+            <table border="1px">
+                <tr> 
+                    <th> git merge "nome-da-branch" </th>
                 </tr>
-             </table>
-        <li> add </li>
-        Quando criamos, modificamos ou excluímos um arquivo, essas alterações ocorrerão em nosso ambiente local e não serão incluídas no próximo commit (a menos que alteremos as configurações).
-        Para incluir as alterações de um arquivo em nosso próximo commit, será preciso usar o comando git add.
-        Para adicionar apenas um arquivo:
-        git add <arquivo>
-        Para adicionar, de uma vez, todos os arquivos modificados:
-        git add .
-        Vale lembrar que o comando git add não altera o repositório e as alterações não são salvas até usarmos o git commit.
-        <li> push </li>
-        Após confirmar as alterações, a próxima coisa que você deseja fazer é enviar as alterações para o servidor remoto usando o comando git push:
-        git push <remote> <nome-do-branch>
-        No entanto, se seu branch for criado recentemente, você também precisará fazer upload do branch com o seguinte comando:
-        git push -u origin <nome-do-branch>
-            <li> pull </li>
-            O git pull é usado para obter atualizações do repositório remoto. 
-            Trata-se de um comando que depende do referencial de onde ele foi feito, ou seja, um git pull feito da sua máquina vai puxar informações do repositório original para ela. Mas um git pull feito a partir do repositório original vai puxar as informações da sua máquina. Percebe?
-            Este comando é uma combinação de git fetch (baixa as alterações do repositório remoto, mas não as mescla com o seu) e git merge (que mescla tudo junto).
-            Isso significa que, quando usamos o git pull, ele recebe as atualizações do repositório remoto (git fetch) e aplica imediatamente as alterações mais recentes no seu local (git merge).
-            git pull <remote>
-        </ul>
+            </table>
+                <li> log </li>
+                <p> Permite ver o histórico de commits ou um específico. </p>
+                <li> checkout </li>
+                Esse é um dos comandos git mais utilizados. Para trabalhar em uma branch, primeiro você precisa mudar
+                para ela. Apesar de parecer algo óbvio, não ir para a branch que você acabou de criar e na qual quer
+                trabalhar é um erro bastante comum no começo.
+                Neste contexto, o principal objetivo do git checkout é ajudar você a mudar de uma branch para outra ou
+                então verificar arquivos e commits:
+            <table border="1px"> 
+                <tr> 
+                    <th> git checkout "nome-da-ramificação" </th>
+                </tr>
+            </table>
+                <p> Há ainda um comando de atalho que te permite criar e ir para um branch de uma vez só: </p>
+            <table border="1px"> 
+                <tr> 
+                    <th> git checkout -b "nome-da-branch" </th>
+                </tr>
+            </table>
+                <li> fetch </li>
+                <p> Primeiramente, precisamos entender que no Git existem duas versões do repositório local. Uma
+                versão contém o seu código, com suas alterações, e a outra versão espelha o repositório remoto,
+                para que seja usada como contraste à sua versão local do código no caso de fazer merge ou diff,
+                por exemplo. </p>
+                <p> Para entender isto, você pode fazer o seguinte teste: </p>
+                    <ul>
+                        <li> Tenha um repositório próprio em dois diretórios diferentes. </li>
+                        <li> Faça uma alteração e um commit em um dos diretórios e em seguida dê git push. </li>
+                <p> No outro repositório faça um fetch seguido de um diff: </p>
+            <table border="1px">
+                <tr>
+                    <th> git fetch </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> git diff origin/master </th>
+                </tr>
+            </table>
+                <p> Você vai ver as diferenças entre o seu código local e o código remoto (que na verdade agora está
+                em sua máquina graças ao fetch), com a alteração que acabou de ser feita, sem que o código local
+                seja alterado. </p>
+                <p> Esta é uma forma segura de atualizar o espelho do repositório remoto em seu repositório local
+                sem fazer merge. </p>
+                <p> Para ter a versão remota em sua "área de trabalho", você ainda precisará fazer "merge" deste
+                commit. E isso é feito automaticamente no caso do git pull: </p>
+                <li> pull </li>
+                <p> O git pull é usado para obter atualizações do repositório remoto. </p>
+                <p> Trata-se de um comando que depende do referencial de onde ele foi feito, ou seja, um git pull
+                feito da sua máquina vai puxar informações do repositório original para ela. Mas um git pull
+                feito a partir do repositório original vai puxar as informações da sua máquina. </p>
+                <p> Este comando é uma combinação de git fetch (baixa as alterações do repositório remoto, mas não
+                as mescla com o seu) e git merge (que mescla tudo junto). </p>
+                <p> Isso significa que, quando usamos o git pull, ele recebe as atualizações do repositório remoto
+                (git fetch) e aplica imediatamente as alterações mais recentes no seu local (git merge). </p>
+            <table border="1px"> 
+                <tr> 
+                    <th> git pull "remote" </th>
+                </tr>
+            </table>
+                <li> branch </li>
+                <p> Com as branches (ou ramificações), vários desenvolvedores podem trabalhar paralelamente no
+                mesmo projeto. Assim, cada um pode codar a sua parte sem que haja confusão! </p>
+                <p> Funciona basicamente da seguinte forma: a cada alteração realizada no código, seja para
+                adicionar um novo recurso ou até mesmo corrigir um erro, cria-se um novo ponto de
+                ramificação que consolida essas mudanças, sem interferir nos arquivos originais. </p>
+                <p> Considerado um dos comandos Git mais importantes, o branch pode ser usado para três
+                finalidades diferentes: criar, listar e excluir ramificações. Veja, na sequência, como
+                trabalhar com cada uma delas. </p>
+                <p> Para criar uma nova branch local, digite: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th>  git branch "nome-da-branch" </th>
+                    </tr>
+                </table>
+                <p> Este comando criará uma branch local. Para upar a nova branch para o repositório remoto,
+                você precisa usar o seguinte comando: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git push -u "remote" "nome-da-branch" </th>
+                    </tr>
+                </table>
+                <p> Para ver as ramificações, por sua vez, use: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git branch </th>
+                    </tr>
+                </table>
+                ou
+                <table border="1px"> 
+                    <tr> 
+                        <th> git branch --list </th>
+                    </tr>
+                </table>
+                <p> Por último, delete uma branch a partir do comando: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git branch -d "nome-da-branch" </th>
+                    </tr>
+                </table>
+                <li> status </li>
+                <p> O comando Git status serve para fornecer algumas informações importantes sobre a branch em que você estiver no momento, incluindo se ela está
+                atualizada em relação à master e quais arquivos foram alterados. </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git status </th>
+                    </tr>
+                </table>
+                <li> remote </li>
+                <p> O comando git remote é usado para gerenciar repositórios remotos em um repositório Git local. Ele permite que você liste, adicione e remova
+                repositórios remotos, bem como defina o nome e a URL de um repositório remoto. </p>
+                <p> Aqui está um exemplo de como adicionar um novo repositório remoto: </p>
+                <p> Para listar os repositórios remotos: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git remote --v </th>
+                    </tr>
+                </table>
+                <p> Para adicionar: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git remote add "nome" "URL" </th>
+                    </tr>
+                </table>
+                <p> Onde "nome" é o nome do repositório remoto e "URL" é a URL do repositório remoto. Você pode então usar o nome do
+                repositório remoto em outros comandos git, como git fetch e git push. </p>
+                <p> Para remover: </p>
+                <table border="1px"> 
+                    <tr> 
+                        <th> git remote rm "nome" </th>
+                    </tr>
+                </table>
+                <p> Fontes: https://comandosgit.github.io/ https://blog.geekhunter.com.br/comandos-git-mais-utilizados/ 
+                    https://www.w3schools.com/git/git_reset.asp?remote=github
+                    https://www.treinaweb.com.br/blog/comandos-do-git-que-voce-precisa-conhecer-parte-2-repositorios-remotos
+                    https://metring.com.br/para-que-serve-o-git-fetch-vs-pull
+                    https://www.bing.com/search?q=git+remote+para+que+serve&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=git+remote+para+que+serve&sc=3-25&sk=&cvid=789EDAFD955540508ACFDE85DE887A5D&ghsh=0&ghacc=0&ghpl=&showconv=1
+                    https://www.atlassian.com/br/git/tutorials/syncing
+                    https://www.codigofonte.com.br/artigos/top-25-comandos-do-git </p>
+        </ul>        
     </main>
     <footer>
-        
+        <p> Ir para a página: </p>
+        <ol>
+            <li><a href="../manualdogit.html" target="_blank"> Manual do Git. </a></li>
+            <li><a href="../princcomandosgit/princcomandosgit.html" target="_blank"> Principais comandos do Git. </a>
+            </li>
+        </ol>
     </footer>
-    </body>
+</body>
 </html>
-       

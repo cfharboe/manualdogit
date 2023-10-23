@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Principais comandos do Git. </title>
+</head>
+
+<body>
+    <header>
+        <h1> Principais comandos do </h1>
+    </header>
+    <main>
+        <h2> Principais comandos Git. </h2>
+        <p> Se você estiver familiarizado com alguns dos principais comandos do Git, seus primeiros passos na ferramenta
+            podem se tornar mais descomplicados. </p>
+        <p> Para isso, trouxe abaixo uma lista dos comandos mais utilizados pelos programadores(as) e o que eles
+            significam.</p>
+        <ul type="square">
+            <li> init </li>
+            <p> O comando git init é o mais indicado para começar um projeto que ainda não seja um repositório (ou
+                repo).
+                Basicamente, ele cria um repositório vazio ou transforma uma pasta que você já tem e que não está com
+                controle de versão em um repositório. </p>
+            <table border="1px">
+                <tr>
+                    <th> git init </th>
+                </tr>
+            </table>
+            <P> Com sua pasta de trabalho devidamente iniciada, é hora de começar a preenchê-la.</p>
+            <li> clone </li>
+            <p> O Git clone é um comando para baixar o código-fonte existente de um repositório remoto (como o Github,
+                por exemplo). </p>
+            <p> Existem algumas maneiras de baixar o código-fonte,mas é preferivel o clone com o modo https: </p>
+            <table border="1px">
+                <tr>
+                    <th> git clone "endereçodolink" </th>
+                </tr>
+            </table>
+            <p> Quando você clonar um repositório, o código é copiado para a o seu computador e continua linkado ao
+                original. </p>
+            <li> commit </li>
+            <p> O git commit visa definir um ponto de verificação no processo de desenvolvimento, para o qual você pode
+                voltar mais tarde, se necessário. </p>
+            <table border="1px">
+                <tr>
+                    <th> git commit -m "mensagem explicando a mudança no código" </th>
+                </tr>
+            </table>
+            <li> add </li>
+            <p> Quando criamos, modificamos ou excluímos um arquivo, essas alterações ocorrerão em nosso ambiente local
+                e não serão incluídas no próximo commit (a menos que alteremos as configurações). </p>
+            <p> Para incluir as alterações de um arquivo em nosso próximo commit, será preciso usar o comando git add.
+            </p>
+            <p> Para adicionar apenas um arquivo: </p>
+            <table border="1px">
+                <tr>
+                    <th> git add "arquivo" </th>
+                </tr>
+            </table>
+            <p> Para adicionar, de uma vez, todos os arquivos modificados: </p>
+            <table border="1px">
+                <tr>
+                    <th> git add . </th>
+                </tr>
+            </table>
+            <p> Vale lembrar que o comando git add não altera o repositório e as alterações não são salvas até
+                usarmos o git commit. </p>
+            <li> push </li>
+            <p> Após confirmar as alterações, a próxima coisa que você deseja fazer é enviar as alterações para o
+                servidor remoto usando o comando git push: </p>
+            <table border="1px">
+                <tr>
+                    <th> git push "remote" "nome-do-branch" </th>
+                </tr>
+            </table>
+            <p> No entanto, se seu branch for criado recentemente, você também precisará fazer upload do
+                branch com o seguinte comando: </p>
+            <table border="1px">
+                <tr>
+                    <th> git push -u origin "nome-do-branch" </th>
+                </tr>
+            </table>
+            <li> config </li>
+            <p> A primeira coisa que você deve fazer quando instalar o Git é definir o seu nome de
+                usuário e endereço de e-mail. Isso é importante porque todos os commits no Git utilizam
+                essas informações, e está imutavelmente anexado nos commits que você realiza </p>
+            <table border="1px">
+                <tr>
+                    <th> git config --global user.name "nomedodesenvolvedor" </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> git config --global user.email "nomedodesenvolvedor@example.com" </th>
+                </tr>
+            </table>
+            <p> Relembrando, você só precisará fazer isso uma vez caso passe a opção --global, pois o
+                Git sempre usará essa informação para qualquer coisa que você faça nesse sistema. Caso
+                você queira sobrepor estas com um nome ou endereço de e-mail diferentes para projetos
+                específicos, você pode executar o comando sem a opção --global quando estiver no próprio
+                projeto. </p>
+            <p> Para ativar as cores nas respostas de comandos, você pode utilizar o seguinte comando:
+            </p>
+            <table border="1px">
+                <tr>
+                    <th> git config --global color.ui true </th>
+                </tr>
+            </table>
+            <li> reset </li>
+            <p> É o comando que usamos quando queremos mover o repositório de volta para um commit
+                anterior, descartando quaisquer alterações feitas após esse commit. </p>
+            <table border="1px">
+                <tr>
+                    <th> git reset HEAD~numerodocommit --soft </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> git reset HEAD~numerodocommit / git reset HEAD~numerodocommit --mixed (default)
+                    </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> git reset HEAD~numerodocommit --hard </th>
+                </tr>
+            </table>
+            <li> help </li>
+            <p> Comando para obter Ajuda ao usar o Git </p>
+            <p> Existem três maneiras de obter a ajuda para qualquer um dos comandos Git </p>
+            <table border="1px">
+                <tr>
+                    <th> git help {comando} </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> git {comando} --help </th>
+                </tr>
+            </table>
+            <table border="1px">
+                <tr>
+                    <th> man git- {comando} </th>
+                </tr>
+            </table>
+        </ul>
+    </main>
+    <footer>
+        <p> Ir para a página: </p>
+        <ol>
+            <li><a href="../manualdogit.html" target="_blank"> Manual do Git. </a></li>
+            <li><a href="../comandosgit/comandosgit.html" target="_blank"> Comandos do Git. </a></li>
+        </ol>
+    </footer>
+</body>
+
+</html>
