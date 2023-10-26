@@ -1,3 +1,11 @@
+*{
+    margin: 15px;
+}
+
+body {
+    background-image: url(../img/matrix.jpg);
+}
+
 h1 { 
     color:tomato;
 }
@@ -7,41 +15,60 @@ h2 {
 }
 
 header {
-    background-image: url(../img/git.jpg);
-    background-size: cover;
-    text-align: left;
-    background-position: center;
-    height: 350px;
-    font-family: Verdana;
-    padding-left: 180px;
-    padding-top: 50px;
+    
 }
+
+.top-bar {
+    background-color:white;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;   
+}
+
+.top-bar--brand-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.top-bar--brand{
+
+}
+
+.top-bar--right {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar--right-logo {
+    width: 10vw;
+    height: auto;
+}
+
 
 footer {
-    background-image: url(../img/coding.jpg);
-    background-size: cover;
-    background-position: center;
-    color:lightgreen;
-    text-align: left;
-    font-family: Verdana;
-    font-size: 16px;
-    height: 280px;
-    padding: 50px 70px 20px;
+    color: white;
 }    
 
-main {
-    background-image: url(../img/program.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: left;
-    color:bisque;
-    font-family: Verdana;
-    font-size: 14px;
-    padding: 50px
+.bottom-bar {
+    background-color:darkgreen;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;  
 }
 
-body {
-    background-image: url(../img/matrix.jpg);
+.bottom-bar--brand-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.bottom-bar--right-logo {
+    width: 10vw;
+    height: auto;
+}
+
+.bottom-bar--right-brand {
+    justify-content:baseline;
 }
 
 a {
@@ -51,8 +78,4 @@ a {
 ol {
     list-style: none;
     font-size: 14px;
-}
-
-*{
-    margin: 15px;
 }
