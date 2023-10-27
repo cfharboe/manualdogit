@@ -8,41 +8,48 @@ body {
 
 h1 { 
     color:tomato;
+    padding-bottom: 35px;
 }
 
 h2 {
     color:tomato ;
 }
 
-header {
-    
+.font {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.character {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-style: italic;
+    color:whitesmoke;
+    background-color: darkgrey;
 }
 
 .top-bar {
-    background-color:white;
+    background-color:darkgreen;
     display: flex;
-    justify-content: space-around ;
-    align-items: center;   
+    justify-content:center;
+    align-items: center;
 }
 
-.top-bar--brand-logo {
-    width: 150px;
-    height: 150px;
-}
-
-.top-bar--brand{
+.top-bar__brand{
 
 }
 
-.top-bar--right {
+.right {
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
 
-.top-bar--right-logo {
+.right__logo {
     width: 10vw;
     height: auto;
+    padding-top: 25px;
 }
 
 
@@ -57,17 +64,17 @@ footer {
     align-items: center;  
 }
 
-.bottom-bar--brand-logo {
+.bottom-bar__brand-logo {
     width: 150px;
     height: 150px;
 }
 
-.bottom-bar--right-logo {
+.right__logo {
     width: 10vw;
     height: auto;
 }
 
-.bottom-bar--right-brand {
+.bottom-bar__right-brand {
     justify-content:baseline;
 }
 

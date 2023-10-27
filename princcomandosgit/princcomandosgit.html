@@ -8,10 +8,14 @@
 </head>
 
 <body>
-    <header>
-        <h1> Principais comandos do </h1>
+    <header class="top-bar">
+        <h1 class="top-bar__brand"> Principais comandos do  </h1>
+        <section class="right">
+            <img class="right__logo" src="../img/gitlogowhite.png" alt="git logo white">  
+        </section>
     </header>
     <main>
+        <article class="font">
         <h2> Principais comandos Git. </h2>
         <p> Se você estiver familiarizado com alguns dos principais comandos do Git, seus primeiros passos na ferramenta
             podem se tornar mais descomplicados. </p>
@@ -132,27 +136,33 @@
             <p> Existem três maneiras de obter a ajuda para qualquer um dos comandos Git </p>
             <table border="1px">
                 <tr>
-                    <th> git help {comando} </th>
+                    <th> git help "comando" </th>
                 </tr>
             </table>
             <table border="1px">
                 <tr>
-                    <th> git {comando} --help </th>
+                    <th> git "comando" --help </th>
                 </tr>
             </table>
             <table border="1px">
                 <tr>
-                    <th> man git- {comando} </th>
+                    <th> man git- "comando" </th>
                 </tr>
             </table>
         </ul>
+    </article>
     </main>
-    <footer>
+    <footer class="bottom-bar">
+        <img class="bottom-bar__brand-logo" src="../img/gitlogowhite.png" alt="git logo white">
         <p> Ir para a página: </p>
         <ol>
             <li><a href="../manualdogit.html" target="_blank"> Manual do Git. </a></li>
             <li><a href="../comandosgit/comandosgit.html" target="_blank"> Comandos do Git. </a></li>
         </ol>
+        <section class="right__logo">
+            <img class="right__logo" src="../img/gitlogo1.png" alt="git logo orange">
+            <p class="bottom-bar__right-brand"> Developed by cfharboe </p>
+        </section>
     </footer>
 </body>
 
